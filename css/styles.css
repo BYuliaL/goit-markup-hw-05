@@ -229,6 +229,7 @@ img {
   height: 50px;
   padding-right: 0px;
   padding-left: 0px;
+  outline: none;
 }
 
 .hero {
@@ -631,7 +632,13 @@ div .footer-tel {
   text-decoration: none;
 }
 
-/* модальное окно
+/* модальное окно */
+.backgrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .backgrop {
   position: fixed;
   top: 0;
@@ -640,6 +647,8 @@ div .footer-tel {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
@@ -648,7 +657,7 @@ div .footer-tel {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 550px;
+  max-width: 520px;
   max-height: 580px;
   background-color: var(--button-color);
   padding: 200px 250px;
@@ -657,15 +666,15 @@ div .footer-tel {
 .modal-icon {
   width: 11px;
   height: 11px;
-  background-color: aqua;
 }
 
-.button1-modal {
+.button-modal {
   position: absolute;
   top: 17px;
   right: 17px;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}*/
+  border-radius: 50%;
+  background-color: var(--button-color);
+}
